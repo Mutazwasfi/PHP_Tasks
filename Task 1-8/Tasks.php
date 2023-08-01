@@ -68,8 +68,83 @@
 
         $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
         asort($fruits);
-        print_r($fruits) . "<br>";
 
+        foreach ($fruits as $key => $value) {
+            echo " $key : $value"."<br>";
+        }
+        
+ 
+        echo "<hr>";
+        echo "Task 7<br>";
+
+        $tempReads= "78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 75, 76, 73, 68, 62, 73, 72, 65, 74, 62, 62, 65, 64, 68, 73, 75, 79, 73";
+
+        $array = explode(",",$tempReads);
+        $readsCount = count($array);
+        $readsSum = array_sum($array);
+        $avarage = $readsSum/$readsCount;
+
+        echo "Average Temperature is: " .$avarage;
+
+        sort($array);
+
+        echo "<br>List of five lowest temperatures: ";
+
+        for ($i=0; $i < 5; $i++) { 
+            echo $array[$i].", ";
+        }
+
+        echo "<br>List of five highest temperatures: ";
+
+        for ($j=($readsCount-5); $j < $readsCount; $j++) { 
+            echo $array[$j].", ";
+        }
+
+
+        
+        echo "<hr>";
+        echo "Task 8<br>";
+
+        $array81 = array("color" => "red", 2, 4);
+        $array82 = array("a", "b", "color" => "green", "shape" => "trapezoid", 4);
+
+        echo '<pre>' ; print_r(array_merge($array81,$array82));
+ 
+
+
+        echo "<hr>";
+        echo "Task 9<br>";
+
+        $colors9 = array("red","blue", "white","yellow");
+        $colors9 = array_map('strtoupper', $colors9);
+        echo "<pre>"; print_r($colors9);
+
+
+        
+        echo "<hr>";
+        echo "Task 10<br>";
+
+        $colors10 = array("RED","BLUE", "WHITE","YELLOW");
+        $colors10 =array_map('strtolower', $colors10);
+        echo "<pre>"; print_r($colors10);
+
+        
+        echo "<hr>";
+        echo "Task 11<br>";
+
+        for ($i=200; $i <251; $i++){ 
+            if ($i%4==0) {
+                echo $i.", ";
+            }
+        }
+
+        // implode(",",range(200,250,4))."<br>"
+
+        
+        echo "<hr>";
+        echo "Task 12<br>";
+
+        
 
     ?>
 </body>
