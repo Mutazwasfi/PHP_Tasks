@@ -102,7 +102,7 @@ echo rtrim($str15, '-')."<br>";
 echo "<hr>";
 echo "Task 16.<br>";
 
-$str16 = '\"\1+2/3*2:2-3/4*3'
+$str16 = '\"\1+2/3*2:2-3/4*3';
 $string = preg_replace('/[^A-Za-z0-9\-]/', '', $str16);
 echo $str16 . "<br>";
 
