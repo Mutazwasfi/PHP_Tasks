@@ -7,180 +7,160 @@
 </head>
 <body>
     <?php
+                
         echo "Task 1<br><br>";
+        $year1=2013;
 
-    for ($i=1; $i < 11; $i++) { 
-        if ($i<10) {
-           echo $i."-";
+        if ($year1%4==0) {
+            echo $year1. " is a leap year ";
         }
         else {
-            echo $i;
+            echo $year1. " is not a leap year ";
         }
-    }   
+        
+        echo "<hr>";
+        echo "Task 2<br><br>";
 
-    echo "<hr>";
-    echo "Task 2<br><br>";
+        $temp2=27;
 
-    $total =0;
-    for ($i=0; $i < 31; $i++) { 
-        $total += $i;
-    }
-    echo $total;
-
-    
-    echo "<hr>";
-    echo "Task 3<br><br>";
-
-    $result = '';
-    for ($i = 0; $i < 5; $i++) {
-    //SPACES
-    for ($j = 0; $j < 5 - $i; $j++) {
-        $result .= " " . chr(65) . " ";
-    }
-    for ($j = 0; $j < $i; $j++) {
-        $result .= " " . chr(65 + $i) . " ";
-    }
-    $result .= "<br>";
-    }
-    echo $result;
-
-    echo "<hr>";
-    echo "Task 4<br><br>";
-
-    $result = '';
-    for ($i = 0; $i < 5; $i++) {
-    //SPACES
-    for ($j = 0; $j < 5 - $i; $j++) {
-        $result .= " 1 ";
-    }
-    for ($j = 0; $j < $i; $j++) {
-        $result .= " " . ($i + 1) . " ";
-    }
-    $result .= "<br>";
-    }
-
-    echo $result;
-
-
-    echo "<hr>";
-    echo "Task 5<br><br>";
-    
-    $result = "";
-    for ($i = 1; $i < 6; $i++) {
-    for ($j = 1; $j < 6; $j++) {
-        if ($j == $i)
-        $result .= " $i ";
-        else
-        $result .= " 0 ";
-    }
-    $result .= "<br>";
-    }
-    echo $result;
-
-    
-    echo "<hr>";
-    echo "Task 6<br><br>";
-
-    function fac($n)
-    {
-    if ($n == 1)
-        return $n;
-    return $n * fac($n - 1);
-    }
-
-    echo "factorial of 5 :" . fac(5);
-
-    
-    echo "<hr>";
-    echo "Task 7<br><br>";
-
-    echo "i don't know";
-
-    echo "<hr>";
-    echo "Task 8<br><br>";
-
-    $str8 = 'Orange Coding Academy';
-    echo substr_count(strtolower($str8), 'c');
-
-    echo "<hr>";
-    echo "Task 9<br><br>";
-
-
-    echo "<table border = 2>";
-    for ($i=1; $i < 7; $i++) { 
-        echo "<tr>";
-        for ($j=1; $j < 6; $j++) { 
-            echo "<td>";
-            echo $i . "*" . $j . "=" . $i*$j;
-            echo "</td>";
-        }
-        echo "</tr>";
-    }
-    echo "</table>";
-
-    echo "<hr>";
-    echo "Task 10<br><br>";
-
-    for ($i=1; $i < 51; $i++) { 
-        if ($i%3==0 && $i%5==0) {
-            echo "FizzBuzz ";
-        }
-        else if ($i%3==0) {
-            echo "Fizz ";
-        }
-        else if ($i%5==0) {
-            echo "Buzz ";
+        if ($temp2<=20) {
+            echo "no beach for you";
         }
         else {
-            echo $i . " ";
+            echo " it is a summertime!";
         }
-    }
 
-    
-    echo "<hr>";
-    echo "Task 11<br><br>";
+        echo "<hr>";
+        echo "Task 3<br>";
 
-
-    function rightTri($n){
-        $number=1;
-    
-        for ($i=1; $i <= $n; $i++) { 
-            
-            for ($j=0; $j < $i; $j++) { 
-                echo $number++ . " ";
-            }
-    
-            echo "<br>";
-    
+        function test3($x, $y) 
+        {
+            return $x == $y ? ($x + $y)*3 : $x + $y;
         }
-    }
-    rightTri(5);
+        echo test3(2, 2)."<br>"; 
 
-
-    echo "<hr>";
-    echo "Task 12<br><br>";
+        echo "<hr>";
+        echo "Task 4<br>";
 
         
-    $result = ' ';
-    $n = 9;
-    $spaces = "&#160&#160";
-    for ($i = 1; $i <= 9; $i++) {
-    $cond1fr = ceil($n / 2) - $i;
-    $cond2 = $i;
-    if ($i >= 5) {
-        $cond1fr = $i - ceil($n / 2);
-        $cond2 = 10 - $i;
-    }
-    //spaces 
-    for ($j = 0; $j < $cond1fr; $j++) {
-        $result .= $spaces;
-    }
-    for ($j = 0; $j < $cond2; $j++) {
-        $result .= chr(65 + $j) . "&#160";
-    }
-    $result .= "<br>";
-    }
-    echo $result;
+        function test4($x, $y) 
+        {
+            return $x + $y == 30 ? $x + $y : "false";
+        }
+        echo test4(10, 10)."<br>";
+
+    
+        echo "<hr>";
+        echo "Task 5<br>";
+
+        function test5($x) 
+        {
+            return $x%3 == 0 && $x>0 ? "true" : "false";
+        }
+        echo test5(20)."<br>";
+        
+        echo "<hr>";
+        echo "Task 8<br>";
+        
+        function calculate_electricity_bill($units) {
+            $first_unit_cost = 3.50;
+            $second_unit_cost = 4.00;
+            $third_unit_cost = 5.20;
+            $fourth_unit_cost = 6.50;
+    
+            if($units <= 50) {
+                $bill = $units * $first_unit_cost;
+            }
+            else if($units > 50 && $units <= 150) {
+                $temp = 100 * $first_unit_cost;
+                $remaining_units = $units - 50;
+                $bill = $temp + ($remaining_units * $second_unit_cost);
+            }
+            else if($units > 150 && $units <= 250) {
+                $temp = (50 * $first_unit_cost) + (100 * $second_unit_cost);
+                $remaining_units = $units - 150;
+                $bill = $temp + ($remaining_units * $third_unit_cost);
+            }
+            else {
+                $temp = (50 * $first_unit_cost) + (100 * $second_unit_cost) + (100 * $third_unit_cost);
+                $remaining_units = $units - 250;
+                $bill = $temp + ($remaining_units * $fourth_unit_cost);
+            }
+            return number_format((float)$bill, 2, '.', '');
+        }
+ 
+        echo "<hr>";
+        echo "Task 9<br>";
+
+        function calculator($x9,$y9,$op9){
+            switch ($op9) {
+                case "+":
+                    echo $x9+$y9;
+                    break;
+                case "-":
+                    echo $x9-$y9;
+                    break;
+                case "*":
+                    echo $x9*$y9;
+                    break;
+                default:
+                echo $x9/$y9;
+                    break;
+            }
+        }
+
+        echo "<hr>";
+        echo "Task 10<br>";
+
+        $age=15;
+
+        if ($age>=18) {
+            echo "is eligiable to vote";
+        }
+        else {
+            echo "tough luck, kick rooks kid!!";
+        }
+
+
+        echo "<hr>";
+        echo "Task 11<br>";
+
+        $number=-60;
+
+        if ($number>0) {
+            echo "is postive";
+        }
+        else if($number==0){
+            echo "zero";
+        }
+        else {
+            echo "is negative";
+        }
+
+        
+        echo "<hr>";
+        echo "Task 12<br>";
+
+        $marks = array(60,86,95,63,55,74,79,62,50);
+        $marksCount = count($marks);
+        $marksSum = array_sum($marks);
+        $avarage = $marksSum/$marksCount;
+
+        if ($avarage<60) {
+            echo "F";
+        }
+        else if($avarage<70) {
+            echo "D";
+        }
+        else if($avarage<80) {
+            echo "C";
+        }
+        else if($avarage<90) {
+            echo "B";
+        }
+        else {
+            echo "A";
+        }
 
     ?>
 </body>
