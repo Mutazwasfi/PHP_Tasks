@@ -13,8 +13,8 @@
   class outputMsg{
     public function __construct() {
    echo "MyClass class has initialized !";
+    }
   }
- }
   $display = new outputMsg;
 
   echo "<hr>";
@@ -37,7 +37,8 @@
 
   class factorial_of_a_number {
   protected $_n;
-  public function __construct($n)
+
+  function __construct($n)
    {
      if (!is_int($n))
 	   {
@@ -45,7 +46,7 @@
       }
     $this->_n = $n;
 	}
-  public function result()
+  function result()
     {
      $factorial = 1;
      for ($i = 1; $i <= $this->_n; $i++)
@@ -66,11 +67,12 @@
   class array_sort {
     protected $_asort;
     
-    public function __construct(array $asort)
+    function __construct(array $asort)
      {
         $this->_asort = $asort;
      }
-    public function sortedarr()
+
+    function sortedarr()
      {
         $sorted = $this->_asort;
         sort($sorted);
@@ -80,6 +82,20 @@
   $sortarray = new array_sort(array(11, -2, 4, 35, 0, 8, -9));
   print_r($sortarray->sortedarr());
 
+
+  echo "<hr>";
+  echo "Task 5<br><br>";
+
+  $startDate = new DateTime("1981-11-03");
+  $endDate = new DateTime("2013-09-04");
+  $timePassed = $startDate->diff($endDate);
+  echo "Difference : " . $timePassed->y . " years, " . $timePassed->m." months, ".$timePassed->d." days ";
+
+  echo "<hr>";
+  echo "Task 6<br><br>";
+
+  $dt = DateTime::createFromFormat('m-d-Y', '12-08-2004')->format('Y-m-d');
+  echo $dt;
 
   ?>
 </body>
