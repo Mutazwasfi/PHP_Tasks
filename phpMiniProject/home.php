@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
     
@@ -30,10 +30,14 @@
   <!--  Sign Up  -->
     <section class="section sign-up">
       <form action="">
-        <input type="text" name="name" placeholder="Name">
-        <input type="text" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="password" name="confirm" placeholder="Confirm Password">
+        <input required type="text" name="fName" placeholder="First Name">
+        <input required type="text" name="mName" placeholder="Middle Name">
+        <input required type="text" name="lName" placeholder="Last Name">
+        <input required type="text" name="famName" placeholder="Family Name">
+        <input required type="text" name="email" placeholder="Email">
+        <input required type="password" name="password" placeholder="Password">
+        <input required type="password" name="confirm" placeholder="Confirm Password">
+        <input required type="date" name="birthDate" placeholder="birth Date">
         <button>Create Account</button>
         <p class="opposite-btn2">Already have an account?</p>
       </form>
@@ -49,6 +53,6 @@
       </form>
     </section>
 </div>
-<script src="signUp.js"></script>
+<script src="home.js"></script>
 </body>
 </html>

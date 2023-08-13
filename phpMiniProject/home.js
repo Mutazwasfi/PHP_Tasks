@@ -36,3 +36,13 @@ btn4.addEventListener('click', () => {
   signIn.style.display = 'block';
 });
 
+
+
+// let pattern = /^[a-zA-Z0-9_.]+$/i;
+// if (!USERNAME.value.match(pattern))
+
+// let pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+// if (!EMAIL.value.match(pattern))
+
+// let pattern = /^(?=.*\d)(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,16}$/;
+// if (!PASSWORD.value.match(pattern))

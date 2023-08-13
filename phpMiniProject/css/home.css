@@ -12,7 +12,7 @@ body {
 	 padding-bottom: 20px;
 	 font-family: 'Nunito', sans-serif;
 	 color: white;
-     background-color: #85FFBD;
+   background-color: #85FFBD;
 }
 
 .wrapper {
@@ -36,10 +36,12 @@ header h1 {
   }
 
 .welcomeText {
+  margin-top: 10%;
 	text-align: center;
 }
 
 .welcomeBtns {
+  margin-top: 10%;
 	display: flex;
 	justify-content: space-around;
 }
@@ -51,6 +53,7 @@ header h1 {
 	width: 100%;
 	padding: 0.85rem;
 	font-size: 1rem;
+  font-weight: 400;
 	color: #000;
 	background: #85FFBD;
 }
@@ -73,6 +76,7 @@ form > input {
 	 height: 2rem;
 	 padding: 0 0 0.25rem 0;
 	 font-size: .8rem;
+   font-weight: 400;
 	 color: white;
 	 background: transparent;
 }
@@ -102,6 +106,10 @@ form > button:focus {
 form > p {
 	 text-align: center;
 	 color: white;
+}
+
+.sign-up form {
+  padding: 10% 0;
 }
 
 .sign-up, .sign-in {
